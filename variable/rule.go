@@ -42,3 +42,15 @@ func variableValueCheck(value float64, category string, lowerBound float64, uppe
 
 	return true
 }
+
+func variableBoundReset(v *Variable) *Variable {
+	switch v.category {
+	case constant.BinaryVariable:
+		v.lowerBound = constant.DefaultBinaryLowerBound
+		v.upperBound = constant.DefaultBinaryUpperBound
+	case constant.IntegerVariable, constant.RealVariable:
+		v.lowerBound = constant.DefaultLowerBound
+		v.upperBound = constant.DefaultUpperBound
+	}
+	return v
+}

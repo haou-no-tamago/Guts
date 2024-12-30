@@ -19,3 +19,10 @@ const (
 	IntegerVariable = "Integer"
 	BinaryVariable  = "Binary"
 )
+
+// Solver
+const (
+	UnsolvedStatus = "Unsolved"
+	OptimalStatus  = "Optimal"
+	AbortedStatus  = "Aborted"
+)

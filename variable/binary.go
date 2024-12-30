@@ -7,7 +7,7 @@ func NewBinaryVariable(name string) *Variable {
 		name:       name,
 		category:   constant.BinaryVariable,
 		value:      constant.DefaultLowerBound,
-		lowerBound: 0.0,
-		upperBound: 1.0,
+		lowerBound: constant.DefaultBinaryLowerBound,
+		upperBound: constant.DefaultBinaryUpperBound,
 	}
 }

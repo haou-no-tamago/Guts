@@ -16,7 +16,8 @@ func NewVariable(
 	name string,
 	category string,
 	lowerBound float64,
-	upperBound float64) *Variable {
+	upperBound float64,
+) *Variable {
 
 	variableCategoryCheck(category)
 

@@ -1,10 +1,5 @@
 package variable
 
-func (v *Variable) SetName(name string) *Variable {
-	v.name = name
-	return v
-}
-
 func (v *Variable) SetCategory(category string) *Variable {
 	variableCategoryCheck(category)
 	return v
@@ -26,4 +21,8 @@ func (v *Variable) SetFixed(value float64) *Variable {
 	v.SetValue(value)
 	v.SetBound(value, value)
 	return v
+}
+
+func (v *Variable) SetFree() *Variable {
+	return variableBoundReset(v)
 }
