@@ -74,6 +74,11 @@ func (f *Factory) SetModelContent(modelContent string) *Factory {
 	return f
 }
 
+func (f *Factory) SetSolveStatus(status string) *Factory {
+	f.status = Status
+	return f
+}
+
 func (f *Factory) SetObjectiveValue(objectiveValue float64) *Factory {
 	f.objectiveValue = objectiveValue
 	return f
