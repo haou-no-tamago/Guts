@@ -85,6 +85,9 @@ func (f *Factory) SetObjectiveValue(objectiveValue float64) *Factory {
 }
 
 func (f *Factory) SetVariableValue(name string, value float64) *Factory {
+	if f.variableValue == nil {
+	    f.variableValue = make(map[string]float64)
+	}
 	f.variableValue[name] = value
 	return f
 }
