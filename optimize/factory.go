@@ -75,7 +75,7 @@ func (f *Factory) SetModelContent(modelContent string) *Factory {
 }
 
 func (f *Factory) SetSolveStatus(status string) *Factory {
-	f.status = Status
+	f.status = status
 	return f
 }
 
