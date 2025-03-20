@@ -22,7 +22,8 @@ const (
 
 // Solver
 const (
-	UnsolvedStatus = "Unsolved"
-	OptimalStatus  = "Optimal"
-	AbortedStatus  = "Aborted"
+	UnsolvedStatus   = "Unsolved"
+	OptimalStatus    = "Optimal"
+	AbortedStatus    = "Aborted"
+	InfeasibleStatus = "Infeasible"
 )
