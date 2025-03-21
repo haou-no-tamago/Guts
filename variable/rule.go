@@ -20,7 +20,7 @@ func variableBoundCheck(lowerBound float64, upperBound float64) bool {
 }
 
 func variableValueCheck(value float64, category string, lowerBound float64, upperBound float64) bool {
-	if value > upperBound || value < lowerBound {
+	if value > upperBound + constant.ErrorTolerance || value < lowerBound - constant.ErrorTolerance {
 		return false
 	}
 
