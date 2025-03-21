@@ -16,7 +16,7 @@ func variableCategoryCheck(category string) bool {
 }
 
 func variableBoundCheck(lowerBound float64, upperBound float64) bool {
-	return lowerBound <= upperBound
+	return lowerBound - constant.ErrorTolerance <= upperBound + constant.ErrorTolerance
 }
 
 func variableValueCheck(value float64, category string, lowerBound float64, upperBound float64) bool {
