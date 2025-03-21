@@ -26,11 +26,11 @@ func (c *Constraint) RightHandSide() float64 {
 func (c *Constraint) Feasible() bool {
 	switch c.sense {
 	case constant.GreaterSense:
-		return c.leftHandSide.Value() >= c.rightHandSide
+		return c.leftHandSide.Value() >= c.rightHandSide - constant.ErrorTolerance
 	case constant.EqualSense:
-		return c.leftHandSide.Value() == c.rightHandSide
+		return c.leftHandSide.Value() <= c.rightHandSide + constant.ErrorTolerance && c.leftHandSide.Value() >= c.rightHandSide - constant.ErrorTolerance
 	case constant.LessSense:
-		return c.leftHandSide.Value() <= c.rightHandSide
+		return c.leftHandSide.Value() <= c.rightHandSide + constant.ErrorTolerance
 	}
 	return false
 }
